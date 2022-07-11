@@ -1,3 +1,5 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/fonts-families.scss';
 
 .list-of-users-head, .list-of-users {
 
@@ -146,11 +148,11 @@
 
 
   .for-name-mobile {
-    font-family: $font-roboto;
+    font-family: $font-stack-roboto;
     font-weight: 400;
     font-size: 20px;
     text-align: left;
-    color: $color-dark
+    color: $color-black;
   }
 
 
@@ -172,7 +174,7 @@ display: block !important;
 
   font-size: 20px;
   font-weight: 300;
-  color: $color-dark;
+  color: $color-black;
   text-align: right;
 }
 }
