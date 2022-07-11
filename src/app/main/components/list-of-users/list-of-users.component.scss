@@ -1,0 +1,185 @@
+
+.list-of-users-head, .list-of-users {
+
+  .for-name {
+    width: 20%;
+  }
+
+  .for-age {
+    width: 5%;
+  }
+
+  .for-email {
+    width: 40%;
+  }
+
+  .for-phone {
+    width: 35%;
+  }
+  
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px solid $color-grey;
+
+  p {
+    font-size: 24px;
+    font-weight: 200;
+    font-style: normal;
+    color: $color-grey;
+    display: block;
+    text-align: center;
+   
+  }
+}
+
+
+.list{
+
+  border: 1px solid $color-grey;
+  border-radius: 30px;
+  width: 70%;
+  margin: auto;
+  margin-top: 50px; 
+  margin-bottom: 50px;
+  
+}
+.list-of-users {
+
+  .for-name-and-email{
+    display: none;
+  }
+
+  .block-for-age {
+    display: none;
+  }
+
+  border: none;
+
+
+  p {
+
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {  
+
+  .list { 
+
+    width: 90%;
+
+  .list-of-users-head, .list-of-users {
+
+    .for-name {
+      width: 20%;
+    }
+  
+    .for-age {
+      width: 10%;
+    }
+  
+    .for-email {
+      width: 50%;
+    }
+  
+    .for-phone {
+      width: 35%;
+    }
+
+}
+}
+}
+
+@media screen and (max-width: 1024px) {
+
+  .list { 
+
+  .list-of-users-head, .list-of-users {
+
+    .for-name {
+      width: 20%;
+    }
+  
+    .for-age {
+      width: 20%;
+    }
+  
+    .for-email {
+      width: 90%;
+    }
+  
+    .for-phone {
+      width: 60%;
+    }
+
+}
+}
+}
+
+
+@media screen and (max-width: 425px) {
+
+  .list {
+
+    .list-of-users-head, .for-age,.for-name, .for-email, .for-phone  {
+
+      display: none;
+    }
+
+    .list-of-users {
+
+      &:last-child{
+        border-bottom: none;
+      }
+
+      border-bottom: 1px solid $color-grey;
+      justify-content: space-between;
+    }
+}
+
+.for-name-and-email {
+  display: block !important;
+  width: calc(100% - 100px);
+  padding-left: 10px;
+  padding-top: 10px;
+
+
+  .for-name-mobile {
+    font-family: $font-roboto;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: left;
+    color: $color-dark
+  }
+
+
+  .for-email-mobile {
+
+    font-size: 15px;
+    font-weight: 300;
+    text-align: left;
+  }
+}
+
+.block-for-age {
+display: block !important;
+  width: 100px;
+  padding-right: 15px;
+  padding-top: 10px;
+
+.for-age-mobile {
+
+  font-size: 20px;
+  font-weight: 300;
+  color: $color-dark;
+  text-align: right;
+}
+}
+
+}
+
+
+
+
+

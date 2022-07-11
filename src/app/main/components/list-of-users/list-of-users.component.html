@@ -1,0 +1,22 @@
+<div class="list" *ngIf="userService.listOfUser.length !== 0">
+    <div class="list-of-users-head">
+      <p class="for-name">Name</p>
+      <p class="for-age">Age</p>
+      <p class="for-email">Email</p>
+      <p class="for-phone">Phone</p>
+    </div>
+    <div *ngFor="let user of userService.listOfUser" class="list-of-users">
+      <p class="for-name">{{ user.name }}</p>
+      <p class="for-age">{{ user.age }}</p>
+      <p class="for-email">{{ user.email }}</p>
+      <p class="for-phone">{{ user.phone }}</p>
+        <div class="for-name-and-email">
+          <p class="for-name-mobile">{{ user.name }}</p>
+          <p class="for-email-mobile">{{ user.email }}</p>
+        </div>
+        <div class="block-for-age">
+          <p class="for-age-mobile">{{ user.age }} y.o.</p>
+        </div>
+    </div>
+  </div>
+  

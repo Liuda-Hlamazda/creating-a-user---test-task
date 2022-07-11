@@ -1,0 +1,65 @@
+<form class="form-for-registration" [formGroup]="form" (ngSubmit)="addUserToList()">
+    <div class="title">
+      <h1>Create your profile</h1>
+      <h6>
+        Enter your name, age, email and phone number to <br />
+        complete your profile.
+      </h6>
+    </div>
+    <div class="form-control">
+      <label for="name">Name</label> <br />
+      <input
+        [class.error-for-input]="form.controls['name'].errors?.['required'] && form.controls['name'].touched"
+        id="name"
+        type="text"
+        formControlName="name"
+        placeholder="Liuda"
+      />
+      <p class="error" *ngIf="form.controls['name'].errors?.['required'] && form.controls['name'].touched">
+        This field must be fill
+      </p>
+    </div>
+    <div class="form-control">
+      <label for="age">Age</label> <br />
+      <input
+        [class.error-for-input]="form.controls['age'].errors?.['required'] && form.controls['age'].touched"
+        id="age"
+        type="number"
+        formControlName="age"
+        placeholder="20"
+      />
+      <p class="error" *ngIf="form.controls['age'].errors?.['required'] && form.controls['age'].touched">
+        This field must be fill
+      </p>
+    </div>
+    <div class="form-control">
+      <label for="email">Email</label> <br />
+      <input
+        [class.error-for-input]="form.controls['email'].errors?.['required'] && form.controls['email'].touched"
+        id="email"
+        type="email"
+        formControlName="email"
+        placeholder="example@gmail.com"
+      />
+      <p class="error" *ngIf="form.controls['email'].errors?.['email']&& form.controls['email'].touched">
+        This field must be email
+      </p>
+      <p class="error" *ngIf="form.controls['email'].errors?.['required']&& form.controls['email'].touched">
+        This field must be fill
+      </p>
+    </div>
+    <div class="form-control">
+      <label for="phone">Phone</label> <br />
+      <input
+        [class.error-for-input]="form.controls['phone'].errors?.['required'] && form.controls['phone'].touched"
+        id="phone"
+        type="text"
+        formControlName="phone"
+        placeholder="+380967950559"
+      />
+      <p class="error" *ngIf="form.controls['phone'].errors?.['required']&& form.controls['phone'].touched">
+        This field must be fill
+      </p>
+    </div>
+    <button type="submit" [disabled]="form.invalid">Add</button>
+  </form>
